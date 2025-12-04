@@ -29,7 +29,7 @@ SMODS.Stage {
   pos = {x=0,y=0},
   rarity = "ave_common_stages",
   pools = {
-    ["Stage"] = true
+    Stage = true
   },
   in_pool = function(self, args)
     return true, {allow_duplicates = true}
@@ -55,7 +55,7 @@ SMODS.Stage {
   pos = {x=1,y=0},
   rarity = "ave_uncommon_stages",
   pools = {
-    ["Stage"] = true
+    Stage = true
   },
   in_pool = function(self, args)
     return true, {allow_duplicates = true}
@@ -81,7 +81,7 @@ SMODS.Stage {
   pos = {x=2,y=0},
   rarity = "ave_rare_stages",
   pools = {
-    ["Stage"] = true
+    Stage = true
   },
   in_pool = function(self, args)
     return true, {allow_duplicates = true}
@@ -111,7 +111,7 @@ SMODS.Stage {
     {key = "j_stone", rate = 1, rarity = "Legendary"}
   },
   pools = {
-    ["Stage"] = true
+    Stage = true
   },
   in_pool = function(self, args)
     return true, {allow_duplicates = true}

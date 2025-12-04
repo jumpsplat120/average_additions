@@ -22,7 +22,7 @@ SMODS.Stage {
   },
   display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {mod_max_interest = 30, shop_price_mult = 1.25}},
-  loc_vars = function(self, info_queue, card)
+  loc_vars = function(_, _, card)
     return { vars = { card.ability.extra.mod_max_interest, card.ability.extra.shop_price_mult * 100 } }
   end,
   atlas = "atlas_custom_stages",
@@ -31,7 +31,7 @@ SMODS.Stage {
   pools = {
     Stage = true
   },
-  in_pool = function(self, args)
+  in_pool = function()
     return true, {allow_duplicates = true}
   end
 }
@@ -48,7 +48,7 @@ SMODS.Stage {
   },
   display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {mod_hand_size = 2, spade_mult = 2, heart_mult = 0.5}},
-  loc_vars = function(self, info_queue, card)
+  loc_vars = function(_, _, card)
     return { vars = { card.ability.extra.mod_hand_size, card.ability.extra.spade_mult, card.ability.extra.heart_mult } }
   end,
   atlas = "atlas_custom_stages",
@@ -57,7 +57,7 @@ SMODS.Stage {
   pools = {
     Stage = true
   },
-  in_pool = function(self, args)
+  in_pool = function()
     return true, {allow_duplicates = true}
   end
 }
@@ -74,7 +74,7 @@ SMODS.Stage {
   },
   display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {joker_price_mult = 2, joker_effect_mult = 2, mod_hand_size = -1}},
-  loc_vars = function(self, info_queue, card)
+  loc_vars = function(_, _, card)
     return { vars = { card.ability.extra.joker_price_mult, card.ability.extra.joker_effect_mult, card.ability.extra.mod_hand_size } }
   end,
   atlas = "atlas_custom_stages",
@@ -83,7 +83,7 @@ SMODS.Stage {
   pools = {
     Stage = true
   },
-  in_pool = function(self, args)
+  in_pool = function()
     return true, {allow_duplicates = true}
   end
 }
@@ -100,7 +100,7 @@ SMODS.Stage {
   },
   display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {cards_wild = true, score_mult = 0.5}},
-  loc_vars = function(self, info_queue, card)
+  loc_vars = function(_, _, card)
     return { vars = { card.ability.extra.score_mult * 100 } }
   end,
   atlas = "atlas_custom_stages",
@@ -113,7 +113,7 @@ SMODS.Stage {
   pools = {
     Stage = true
   },
-  in_pool = function(self, args)
+  in_pool = function()
     return true, {allow_duplicates = true}
   end
 }

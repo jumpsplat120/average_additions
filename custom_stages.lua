@@ -6,7 +6,7 @@ SMODS.Atlas {
 }
 
 SMODS.Stage {
-  key = 'casino_floor',
+  key = "casino_floor",
   loc_txt = {
     name = "Casino Floor",
     text = {
@@ -20,9 +20,9 @@ SMODS.Stage {
   loc_vars = function(self, info_queue, card)
     return { vars = { card.ability.extra.mod_max_interest, card.ability.extra.shop_price_mult * 100 } }
   end,
-  atlas = 'atlas_custom_stages',
+  atlas = "atlas_custom_stages",
   pos = {x=0,y=0},
-  rarity = 'ave_common_stages',
+  rarity = "ave_common_stages",
   pools = {
     ["Stage"] = true
   },
@@ -32,7 +32,7 @@ SMODS.Stage {
 }
 
 SMODS.Stage {
-  key = 'misty_lake',
+  key = "misty_lake",
   loc_txt = {
     name = "Misty Lake",
     text = {
@@ -46,9 +46,9 @@ SMODS.Stage {
   loc_vars = function(self, info_queue, card)
     return { vars = { card.ability.extra.mod_hand_size, card.ability.extra.spade_mult, card.ability.extra.heart_mult } }
   end,
-  atlas = 'atlas_custom_stages',
+  atlas = "atlas_custom_stages",
   pos = {x=1,y=0},
-  rarity = 'ave_uncommon_stages',
+  rarity = "ave_uncommon_stages",
   pools = {
     ["Stage"] = true
   },
@@ -58,7 +58,7 @@ SMODS.Stage {
 }
 
 SMODS.Stage {
-  key = 'ancient_temple',
+  key = "ancient_temple",
   loc_txt = {
     name = "Ancient Temple",
     text = {
@@ -72,9 +72,9 @@ SMODS.Stage {
   loc_vars = function(self, info_queue, card)
     return { vars = { card.ability.extra.joker_price_mult, card.ability.extra.joker_effect_mult, card.ability.extra.mod_hand_size } }
   end,
-  atlas = 'atlas_custom_stages',
+  atlas = "atlas_custom_stages",
   pos = {x=2,y=0},
-  rarity = 'ave_rare_stages',
+  rarity = "ave_rare_stages",
   pools = {
     ["Stage"] = true
   },
@@ -84,7 +84,7 @@ SMODS.Stage {
 }
 
 SMODS.Stage {
-  key = 'quantum_realm',
+  key = "quantum_realm",
   loc_txt = {
     name = "Quantum Realm",
     text = {
@@ -98,12 +98,12 @@ SMODS.Stage {
   loc_vars = function(self, info_queue, card)
     return { vars = { card.ability.extra.score_mult * 100 } }
   end,
-  atlas = 'atlas_custom_stages',
+  atlas = "atlas_custom_stages",
   pos = {x=3,y=0},
-  rarity = 'ave_legendary_stages',
+  rarity = "ave_legendary_stages",
   bonus_key = {
-    {key = 'j_golden', rate = 1, rarity = "Legendary"},
-    {key = 'j_stone', rate = 1, rarity = "Legendary"}
+    {key = "j_golden", rate = 1, rarity = "Legendary"},
+    {key = "j_stone", rate = 1, rarity = "Legendary"}
   },
   pools = {
     ["Stage"] = true

@@ -27,7 +27,9 @@ SMODS.Stage {
   display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {mod_max_interest = 30, shop_price_mult = 1.25}},
   loc_vars = function(_, _, card)
-    return { vars = { card.ability.extra.mod_max_interest, card.ability.extra.shop_price_mult * 100 } }
+    local extra = card.ability.extra
+
+    return { vars = { extra.mod_max_interest, extra.shop_price_mult * 100 } }
   end,
   atlas = "atlas_custom_stages",
   pos = {x=0,y=0},
@@ -51,7 +53,9 @@ SMODS.Stage {
   display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {mod_hand_size = 2, spade_mult = 2, heart_mult = 0.5}},
   loc_vars = function(_, _, card)
-    return { vars = { card.ability.extra.mod_hand_size, card.ability.extra.spade_mult, card.ability.extra.heart_mult } }
+    local extra = card.ability.extra
+
+    return { vars = { extra.mod_hand_size, extra.spade_mult, extra.heart_mult } }
   end,
   atlas = "atlas_custom_stages",
   pos = {x=1,y=0},
@@ -75,7 +79,9 @@ SMODS.Stage {
   display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {joker_price_mult = 2, joker_effect_mult = 2, mod_hand_size = -1}},
   loc_vars = function(_, _, card)
-    return { vars = { card.ability.extra.joker_price_mult, card.ability.extra.joker_effect_mult, card.ability.extra.mod_hand_size } }
+    local extra = card.ability.extra
+    
+    return { vars = { extra.joker_price_mult, extra.joker_effect_mult, extra.mod_hand_size } }
   end,
   atlas = "atlas_custom_stages",
   pos = {x=2,y=0},

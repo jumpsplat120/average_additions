@@ -3,6 +3,10 @@ local WIDTH, HEIGHT
 WIDTH  = 95
 HEIGHT = 71
 
+local function pool()
+    return true, { allow_duplicates = true }
+end
+
 SMODS.Atlas {
   key = "atlas_custom_stages",
   path = "custom_areas.png",
@@ -31,9 +35,7 @@ SMODS.Stage {
   pools = {
     Stage = true
   },
-  in_pool = function()
-    return true, {allow_duplicates = true}
-  end
+  in_pool = pool
 }
 
 SMODS.Stage {
@@ -57,9 +59,7 @@ SMODS.Stage {
   pools = {
     Stage = true
   },
-  in_pool = function()
-    return true, {allow_duplicates = true}
-  end
+  in_pool = pool
 }
 
 SMODS.Stage {
@@ -83,9 +83,7 @@ SMODS.Stage {
   pools = {
     Stage = true
   },
-  in_pool = function()
-    return true, {allow_duplicates = true}
-  end
+  in_pool = pool
 }
 
 SMODS.Stage {
@@ -113,7 +111,5 @@ SMODS.Stage {
   pools = {
     Stage = true
   },
-  in_pool = function()
-    return true, {allow_duplicates = true}
-  end
+  in_pool = pool
 }

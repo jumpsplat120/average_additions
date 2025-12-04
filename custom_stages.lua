@@ -1,8 +1,13 @@
+local WIDTH, HEIGHT
+
+WIDTH  = 95
+HEIGHT = 71
+
 SMODS.Atlas {
   key = "atlas_custom_stages",
   path = "custom_areas.png",
-  px = 95,
-  py = 71
+  px = WIDTH,
+  py = HEIGHT
 }
 
 SMODS.Stage {
@@ -15,7 +20,7 @@ SMODS.Stage {
       "Interest cap raised to {C:green}$30{}"
     }
   },
-  display_size = {w = 95, h = 71},
+  display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {mod_max_interest = 30, shop_price_mult = 1.25}},
   loc_vars = function(self, info_queue, card)
     return { vars = { card.ability.extra.mod_max_interest, card.ability.extra.shop_price_mult * 100 } }
@@ -41,7 +46,7 @@ SMODS.Stage {
       "{C:green}+2{} hand size"
     }
   },
-  display_size = {w = 95, h = 71},
+  display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {mod_hand_size = 2, spade_mult = 2, heart_mult = 0.5}},
   loc_vars = function(self, info_queue, card)
     return { vars = { card.ability.extra.mod_hand_size, card.ability.extra.spade_mult, card.ability.extra.heart_mult } }
@@ -67,7 +72,7 @@ SMODS.Stage {
       "{C:red}-1{} starting hand size"
     }
   },
-  display_size = {w = 95, h = 71},
+  display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {joker_price_mult = 2, joker_effect_mult = 2, mod_hand_size = -1}},
   loc_vars = function(self, info_queue, card)
     return { vars = { card.ability.extra.joker_price_mult, card.ability.extra.joker_effect_mult, card.ability.extra.mod_hand_size } }
@@ -93,7 +98,7 @@ SMODS.Stage {
       "Legendary Jokers are {C:green}2x{} more common"
     }
   },
-  display_size = {w = 95, h = 71},
+  display_size = {w = WIDTH, h = HEIGHT},
   config = {extra = {cards_wild = true, score_mult = 0.5}},
   loc_vars = function(self, info_queue, card)
     return { vars = { card.ability.extra.score_mult * 100 } }

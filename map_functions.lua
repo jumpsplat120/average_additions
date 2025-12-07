@@ -57,7 +57,7 @@ function ave_copyBlind(blind)
     return t
 end
 
-function modify(e)
+--[[ function modify(e)
   local currentLevel = e.ability.extra
   G.GAME.interest_cap = G.GAME.interest_cap + (currentLevel and currentLevel.mod_max_interest or 0)
   G.GAME.starting_params.ante_scaling = G.GAME.starting_params.ante_scaling * (currentLevel and currentLevel.mod_score or 1)
@@ -84,7 +84,7 @@ function modify(e)
         G.P_BLINDS.bl_big.boss = nil
     end
   end
-end
+end ]]
 
 
 local ave_timer = 0

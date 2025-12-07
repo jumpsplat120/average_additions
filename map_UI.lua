@@ -196,7 +196,7 @@ for i=1, #AVE.MAP.levels do
     if AVE.MAP.selectable_levels[i][j] == 1 then
       card.states.click.can = true
     else
-      --card.states.click.can = false
+      card.states.click.can = false
     end
     card.click = G.FUNCS.ave_select
      AVE.MAP.cell_icon[i][j] =  {}

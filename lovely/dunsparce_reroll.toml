@@ -5,7 +5,6 @@ priority = 1
 # Define a var substitution rule. This searches for lines that contain {{lovely:var_name}}
 # (var_name from this example, it can really be anything) and replaces each match with the
 # provided value.
-# This example would transform print('{{lovely:var_name}}') to print('Hello world!').
 #
 # USEFUL: For when you want to reduce the complexity of repetitive injections, eg. embedding
 # release version numbers in multiple locations.

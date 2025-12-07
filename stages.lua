@@ -514,7 +514,7 @@ SMODS.Stage {
 ---                           UNCOMMON STAGES                           ---             
 ---------------------------------------------------------------------------
 
-local uncommon_rate = 0.5
+local uncommon_rate = 0.7
 
 -- Mt. Moon - Earth/Psychic dual type
 SMODS.Stage {

@@ -186,7 +186,6 @@ position = "before"
 payload = '''
 if ave_stage and v.set == 'Joker' then
   if ave_stage.plus then
-	print("Checking plus types for:", v.key)
     if ave_stage.plus.types and v.ptype then
       local no_matches = true
       local discard_rate = ave_stage.plus.types.rate or 0

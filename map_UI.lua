@@ -267,7 +267,6 @@ function generateLevels()
 end
 
 function createMapUI()
-  print("Starting AVE.map UI")
   mapUI = {n=G.UIT.ROOT, config = {align = 'cm', colour = G.C.CLEAR, maxw = AVE.MAP.dim.w}, nodes={
       {n=G.UIT.C, config = {align = "cm", padding= 0.03, colour = G.C.UI.TRANSPARENT_DARK, r=0.1}, nodes={
         {n=G.UIT.R, config = {align = "cm", padding= 0.05, colour = G.C.DYN_UI.MAIN, r=0.1}, nodes={

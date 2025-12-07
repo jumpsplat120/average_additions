@@ -209,7 +209,7 @@ local safari_color = HEX("F2C74E")
 ---                            COMMON STAGES                            ---             
 ---------------------------------------------------------------------------
 
-local common_rate = 0.3
+local common_rate = 0.4
 -- Viridian forest - Grass
 SMODS.Stage {
   key = 'viridian_forest',
@@ -217,7 +217,7 @@ SMODS.Stage {
     name = "Viridian Forest",
     text = {
       "{X:green,C:white}Grass{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -242,7 +242,7 @@ SMODS.Stage {
     name = "Mt. Mortar",
     text = {
       "{X:red,C:white}Fire{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -267,7 +267,7 @@ SMODS.Stage {
     name = "Slowpoke Well",
     text = {
       "{X:blue,C:white}Water{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -292,7 +292,7 @@ SMODS.Stage {
     name = "Rocket Warehouse",
     text = {
       "{X:money,C:white}Lightning{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -317,7 +317,7 @@ SMODS.Stage {
     name = "Pokemon Tower",
     text = {
       "{X:purple,C:white}Psychic{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -342,7 +342,7 @@ SMODS.Stage {
     name = "Sprout Tower",
     text = {
       "{X:orange,C:white}Fighting{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -367,7 +367,7 @@ SMODS.Stage {
     name = "Union Cave",
     text = {
       "{X:dark_edition,C:white}Colorless{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -392,7 +392,7 @@ SMODS.Stage {
     name = "Rocket Hideout",
     text = {
       "{X:black,C:white}Dark{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -417,7 +417,7 @@ SMODS.Stage {
     name = "Mt. Silver",
     text = {
       "{X:grey,C:white}Metal{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -442,7 +442,7 @@ SMODS.Stage {
     name = "Berry Forest",
     text = {
       "{X:pink,C:white}Fairy{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -467,7 +467,7 @@ SMODS.Stage {
     name = "Dragon's Den",
     text = {
       "{X:blue,C:white}Dragon{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',
@@ -492,7 +492,7 @@ SMODS.Stage {
     name = "Rock Tunnel",
     text = {
       "{X:brown,C:white}Earth{} Pokemon are",
-      "more common",
+      "slightly more common",
     }
   },
   atlas = 'atlas_stages',

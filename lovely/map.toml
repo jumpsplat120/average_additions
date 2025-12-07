@@ -160,7 +160,7 @@ rarity = _rarity or SMODS.poll_rarity("Joker", 'rarity'..G.GAME.round_resets.ant
 match_indent = true
 times = 1
 
-# get_current_pool() - remove local rarity because I set it earlier in scope
+# get_current_pool() - remove rarity declaration because I set it earlier in scope
 [[patches]]
 [patches.pattern]
 target = "functions/common_events.lua"

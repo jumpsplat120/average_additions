@@ -20,7 +20,7 @@ function ave_select_level(e)
   AVE.MAP.current_level[1] = cellR
   AVE.MAP.current_level[2] = cellC
   AVE.MAP.current_stage = e.config.center
-  -- AVE.MAP.current_stage:modify()
+  AVE.MAP.current_stage:modify()
   for i=1,AVE.MAP.dim.columns do
     AVE.MAP.selectable_levels[cellR][i] = 0
     if AVE.MAP.current_level[1] > 1 and AVE.MAP.selectable_levels[AVE.MAP.current_level[1]-1][i] == 2 then

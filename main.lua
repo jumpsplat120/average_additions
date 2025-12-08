@@ -2,16 +2,12 @@ mod_dir = ''..SMODS.current_mod.path
 
 AVE = {}
 
--- SMODS reset_game_globals function - called on run start (true) and run end (false)
---[[ function SMODS.current_mod.reset_game_globals(run_start)
+function SMODS.current_mod.reset_game_globals(run_start)
     if run_start then
-        -- Initialize/reset variables at the start of a new run
+		ave_cleanup_variables()
         ave_initialize_variables()
-    else
-        -- Clean up variables at the end of a run
-        ave_cleanup_variables()
-    end
-end ]]
+	end
+end
 
 -- Function to initialize AVE mod variables for a new run
 function ave_initialize_variables()

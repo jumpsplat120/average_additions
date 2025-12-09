@@ -44,24 +44,20 @@ assert(SMODS.load_file("map_functions.lua"))()
 
 SMODS.Keybind {
   key_pressed = "g",
-  action = function()
-  end
+  action = noop
 }
 
 SMODS.Keybind {
   key_pressed = "h",
-  action = function()
-  end
+  action = noop
 }
 
 SMODS.Keybind {
   key_pressed = "j",
-  action = function()
-  end
+  action = noop
 }
 
 SMODS.Keybind {
   key_pressed = "k",
-  action = function()
-  end
+  action = noop
 }

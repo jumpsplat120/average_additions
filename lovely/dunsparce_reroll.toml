@@ -24,7 +24,7 @@ target = "game.lua"
 pattern = '''{name = 'chips', path = "resources/textures/"..self.SETTINGS.GRAPHICS.texture_scaling.."x/chips.png",px=29,py=29},'''
 position = "after"
 payload = '''
-{name = 'angry-dunsparce', path = "Mods/average_additions/assets/"..self.SETTINGS.GRAPHICS.texture_scaling.."x/dunsparce2.png",px=24,py=26},
+{name = 'angry-dunsparce', path = "Mods/average_additions/assets/"..self.SETTINGS.GRAPHICS.texture_scaling.."x/pixel_dunsparce.png",px=24,py=26},
 '''
 match_indent = true
 times = 1

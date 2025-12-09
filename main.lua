@@ -1,118 +1,63 @@
-mod_dir = ''..SMODS.current_mod.path
+local AVE
+local noop
+
+--Do nothing function. For when you need a function to exist, but don't
+--want it to do anything.
+function noop() end
 
 AVE = {}
 
-function SMODS.current_mod.reset_game_globals(run_start)
-    if run_start then
-		ave_cleanup_variables()
-        ave_initialize_variables()
-	end
-end
+function SMODS.current_mod.reset_game_globals(start)
+    if not start then return end
 
--- Function to initialize AVE mod variables for a new run
-function ave_initialize_variables()
-    -- Initialize core AVE structure
-    AVE.MAP = AVE.MAP or { paths = {}, levels = {} }
+    AVE.MAP = AVE.MAP or {}
+
+    -- Remove any UI elements that might still exist.
+    for x = 1, #(AVE.MAP.cell_icon or {}), 1 do
+        for y = 1, #(AVE.MAP.cell_icon[x] or {}), 1 do
+            (AVE.MAP.cell_icon[x][y] or { remove = noop }):remove()
+        end
+    end
+
+    --Remove map (map vs MAP?)
+    (AVE.map or { remove = noop }):remove()
+
+    AVE.MAP.paths             = {}
+    AVE.MAP.levels            = {}
+    AVE.MAP.cell_icon         = {}
+    AVE.MAP.current_level     = {}
     AVE.MAP.selectable_levels = {}
+    
+    AVE.rarity_weights = {}
+    
+    AVE.MAP.limit         = nil
     AVE.MAP.current_stage = nil
-    AVE.MAP.current_level = {}
-    AVE.MAP.limit = nil
-    
+
+    AVE.map    = nil
     AVE.rarity = nil
-    AVE.rarity_weights = {}
 end
 
--- Function to clean up all AVE mod variables
-function ave_cleanup_variables()
-    -- Clean up map-related variables
-    if AVE.MAP then
-        if AVE.MAP.paths then
-            AVE.MAP.paths = {}
-        end
-        if AVE.MAP.levels then
-            AVE.MAP.levels = {}
-        end
-        if AVE.MAP.selectable_levels then
-            AVE.MAP.selectable_levels = {}
-        end
-        if AVE.MAP.cell_icon then
-            -- Remove any UI elements that might still exist
-            for i = 1, #AVE.MAP.cell_icon do
-                if AVE.MAP.cell_icon[i] then
-                    for j = 1, #AVE.MAP.cell_icon[i] do
-                        if AVE.MAP.cell_icon[i][j] and AVE.MAP.cell_icon[i][j].remove then
-                            AVE.MAP.cell_icon[i][j]:remove()
-                        end
-                    end
-                end
-            end
-            AVE.MAP.cell_icon = {}
-        end
-        AVE.MAP.current_stage = nil
-        AVE.MAP.current_level = {}
-        AVE.MAP.limit = nil
-    end
-    
-    -- Clean up other AVE variables
-    AVE.rarity = nil
-    AVE.rarity_weights = {}
-    
-    -- Clean up the map UI if it exists
-    if AVE.map then
-        AVE.map:remove()
-        AVE.map = nil
-    end
-end
-
-local helper, load_error = SMODS.load_file("map_UI.lua")
-if load_error then
-  sendDebugMessage ("The error is: "..load_error)
-else
-  helper()
-end
-local helper, load_error = SMODS.load_file("map_functions.lua")
-if load_error then
-  sendDebugMessage ("The error is: "..load_error)
-else
-  helper()
-end
-local helper, load_error = SMODS.load_file("dunsparce.lua")
-if load_error then
-  sendDebugMessage ("The error is: "..load_error)
-else
-  helper()
-end
-local helper, load_error = SMODS.load_file("stages.lua")
-if load_error then
-  sendDebugMessage ("The error is: "..load_error)
-else
-  helper()
-end
-
-
-
-
+assert(SMODS.load_file("stages.lua"))(AVE)
+assert(SMODS.load_file("map_UI.lua"))(AVE)
+assert(SMODS.load_file("dunsparce.lua"))(AVE)
+assert(SMODS.load_file("map_functions.lua"))(AVE)
 
 SMODS.Keybind {
   key_pressed = "g",
-  action = function()
-  end
+  action = noop
 }
 
 SMODS.Keybind {
   key_pressed = "h",
-  action = function()
-  end
+  action = noop
 }
 
 SMODS.Keybind {
   key_pressed = "j",
-  action = function()
-  end
+  action = noop
 }
 
 SMODS.Keybind {
   key_pressed = "k",
-  action = function()
-  end
+  action = noop
 }

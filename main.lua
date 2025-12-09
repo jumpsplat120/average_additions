@@ -1,4 +1,3 @@
-mod_dir = ''..SMODS.current_mod.path
 
 AVE = {}
 

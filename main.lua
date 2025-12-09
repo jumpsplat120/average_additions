@@ -33,36 +33,14 @@ function SMODS.current_mod.reset_game_globals(start)
     AVE.MAP.limit         = nil
     AVE.MAP.current_stage = nil
 
-local helper, load_error = SMODS.load_file("map_UI.lua")
-if load_error then
-  sendDebugMessage ("The error is: "..load_error)
-else
-  helper()
-end
-local helper, load_error = SMODS.load_file("map_functions.lua")
-if load_error then
-  sendDebugMessage ("The error is: "..load_error)
-else
-  helper()
-end
-local helper, load_error = SMODS.load_file("dunsparce.lua")
-if load_error then
-  sendDebugMessage ("The error is: "..load_error)
-else
-  helper()
-end
-local helper, load_error = SMODS.load_file("stages.lua")
-if load_error then
-  sendDebugMessage ("The error is: "..load_error)
-else
-  helper()
     AVE.map    = nil
     AVE.rarity = nil
 end
 
-
-
-
+assert(SMODS.load_file("stages.lua"))()
+assert(SMODS.load_file("map_UI.lua"))()
+assert(SMODS.load_file("dunsparce.lua"))()
+assert(SMODS.load_file("map_functions.lua"))()
 
 SMODS.Keybind {
   key_pressed = "g",

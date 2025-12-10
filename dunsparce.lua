@@ -159,12 +159,16 @@ end
 --Keep track of dunsparces in deck. Prevents race conditions with `find_in_deck`.
 --To be used as a callback function.
 function addDunsparceToDeck()
+    if G.STATE ~= G.STATES.SHOP then return end
+
     dunsparces = dunsparces + 1
 
     ave_check_dunsparce()
 end
 
 function removeDunsparceFromDeck()
+    if G.STATE ~= G.STATES.SHOP then return end
+    
     dunsparces = dunsparces - 1
 
     ave_check_dunsparce()

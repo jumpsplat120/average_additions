@@ -198,7 +198,9 @@ function ave_check_dunsparce()
     
     reroll_button = G.shop:get_UIE_by_ID("ui_reroll").parent
 
-    G.shop:get_UIE_by_ID("ui_reroll").parent:remove()
+    reroll_button:remove()
+
     G.shop:add_child(has_card and red or green, reroll_button)
+    
     Ave_color = has_card and colors.RED or green
 end

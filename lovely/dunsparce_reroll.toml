@@ -161,16 +161,10 @@ payload = '''
   end
   return level_evo(self, card, context, "j_poke_dudunsparce")
 end,
-add_to_deck = function(self, card, from_debuff)
-  if G.STATE == G.STATES.SHOP then
-    ave_button_red()
-  end
-end,
-remove_from_deck = function(self, card, from_debuff)
-  if G.STATE == G.STATES.SHOP then
-    ave_button_green()
-  end
-end
+--add/removeDunsparce functions don't exist at moment of patch creation, so
+--we have to wrap callbacks in an anonymous function to prevent crash.
+add_to_deck = function() addDunsparceToDeck() end,
+remove_from_deck = function() removeDunsparceFromDeck() end
 '''
 match_indent = true
 times = 1

@@ -193,7 +193,9 @@ function Ave_assign_vars()
 end
 
 function ave_check_dunsparce()
-    if next(SMODS.find_card("j_poke_dunsparce")) then
+    local has_card = #SMODS.find_card("j_poke_dunsparce") > 0
+
+    if has_card then
         ave_button_red()
     else
         ave_button_green()
@@ -201,7 +203,7 @@ function ave_check_dunsparce()
 end
 
 function ave_button_red()
-    local red, _, reroll_button = Ave_assign_vars()
+    local red, green, reroll_button = Ave_assign_vars()
     G.shop:get_UIE_by_ID("ui_reroll").parent:remove()
     G.shop:add_child(red, reroll_button)
     Ave_color = colors.RED
